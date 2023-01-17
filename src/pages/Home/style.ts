@@ -2,7 +2,7 @@ import styled from "styled-components"
 
 const Main = styled.section`
   width: 50%;
-  height: 400px;
+  height: 430px;
 
   background-color: #414361;
   border-radius: 3px;
@@ -19,6 +19,10 @@ const Main = styled.section`
 
     p {
       color: #ffa9e7c7;
+    }
+
+    .error-msg {
+      color: red;
     }
   }
 

@@ -10,6 +10,12 @@ export const Input = styled.input`
   border: 1px solid gray;
   border-radius: 3px;
 
+
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button{
+  -webkit-appearance: none;
+  }
+
   &:hover {
     border-color: #ff84e8;
   }

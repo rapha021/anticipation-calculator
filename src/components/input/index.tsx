@@ -19,8 +19,8 @@ const CInput = ({
   return (
     <>
       <p>{inputText}</p>
-      <Input {...register(registerAttr)} id={id} type="text" />
-      <p>{errorText[registerAttr]?.message}</p>
+      <Input {...register(registerAttr)} id={id} type="number" />
+      <p className="error-msg">{errorText[registerAttr]?.message}</p>
     </>
   )
 }
