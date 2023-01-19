@@ -1,5 +1,11 @@
 import * as yup from "yup"
 
+export interface IFormData {
+  amount: number
+  installments: number
+  mdr: number
+}
+
 const schema = yup.object().shape({
   amount: yup
     .number()

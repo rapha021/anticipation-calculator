@@ -71,17 +71,6 @@ const Main = styled.section`
 
     .form-fields {
       width: 90%;
-
-      form {
-        width: 100%;
-
-        input {
-          width: 100%;
-        }
-        button {
-          width: 100%;
-        }
-      }
     }
 
     .results {

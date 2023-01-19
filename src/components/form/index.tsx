@@ -1,20 +1,21 @@
 import CInput from "../../components/input"
-import CButton from "../../components/button"
 import { useForm } from "react-hook-form"
 import { yupResolver } from "@hookform/resolvers/yup"
 import schema from "../../services/yup"
+import { useGlobalContext } from "../../contexts/GlobalContext"
+import { Button } from "@chakra-ui/react"
 
-interface IForm {
-  onSubmitHandler: (data: any) => void
-}
+interface IForm {}
 
-const Form = ({ onSubmitHandler }: IForm) => {
+const Form = ({}: IForm) => {
   const {
     register,
     handleSubmit,
     formState: { errors },
     reset,
   } = useForm({ resolver: yupResolver(schema) })
+
+  const { onSubmitHandler, isLoading } = useGlobalContext()
 
   return (
     <form onSubmit={handleSubmit(onSubmitHandler)}>
@@ -40,7 +41,15 @@ const Form = ({ onSubmitHandler }: IForm) => {
         errorText={errors}
       />
 
-      <CButton buttonText="Calcular!" />
+      <Button
+        w="295px"
+        bgColor="#ff84e8"
+        _hover={{ bgColor: "#ff007f" }}
+        isLoading={isLoading}
+        type="submit"
+      >
+        Calcular!
+      </Button>
     </form>
   )
 }
