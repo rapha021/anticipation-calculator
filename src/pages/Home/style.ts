@@ -1,11 +1,15 @@
 import styled from "styled-components"
 
 const Main = styled.section`
-  width: 50%;
+  width: 70%;
+  max-width: 645px;
+
   height: 430px;
 
   background-color: #414361;
-  border-radius: 3px;
+  border-radius: 20px;
+  box-shadow: 0px 0px 61px 38px rgba(0, 0, 0, 0.1);
+
   color: #fff;
 
   display: flex;
@@ -24,6 +28,17 @@ const Main = styled.section`
     .error-msg {
       color: red;
     }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    h1 {
+      font-size: 24px;
+      font-weight: bold;
+    }
   }
 
   .results {
@@ -31,6 +46,7 @@ const Main = styled.section`
     width: 40%;
 
     background-color: #1d1e2c;
+    border-radius: 0 20px 20px 0;
 
     font-style: italic;
     color: #ffa9e7;
@@ -48,15 +64,39 @@ const Main = styled.section`
     padding-left: 50px;
   }
 
-  form {
-    display: flex;
+  @media (max-width: 925px) {
+    height: 800px;
+
     flex-direction: column;
-    gap: 10px;
+
+    .form-fields {
+      width: 90%;
+
+      form {
+        width: 100%;
+
+        input {
+          width: 100%;
+        }
+        button {
+          width: 100%;
+        }
+      }
+    }
+
+    .results {
+      width: 100%;
+      border-radius: 0 0 20px 20px;
+    }
+
+    .flex-div {
+      align-items: center;
+      padding: 0 0 0 0;
+    }
   }
 
-  h1 {
-    font-size: 24px;
-    font-weight: bold;
+  @media (max-width: 550px) {
+    width: 90%;
   }
 `
 

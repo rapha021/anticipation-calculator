@@ -1,19 +1,25 @@
 import styled from "styled-components"
 
 export const Input = styled.input`
-  width: 240px;
-  height: 30px;
+  width: 245px;
+  height: 40px;
 
   background-color: #2a2d43;
   color: #fff;
 
-  border: 1px solid gray;
-  border-radius: 3px;
+  border: 1px solid rgba(0, 0, 0, 0);
+  border-radius: 6px;
 
+  outline: none;
+
+  transition: all 300ms;
+
+  padding: 0;
+  margin: 0;
 
   &::-webkit-outer-spin-button,
-  &::-webkit-inner-spin-button{
-  -webkit-appearance: none;
+  &::-webkit-inner-spin-button {
+    -webkit-appearance: none;
   }
 
   &:hover {
@@ -22,6 +28,5 @@ export const Input = styled.input`
 
   &:focus {
     border-color: #ff84e8;
-    outline: 1px solid #ff84e8;
   }
 `
